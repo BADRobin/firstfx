@@ -61,7 +61,7 @@ public class Controller  {
                     String name = resultSet.getString("name");
                     String lastname = resultSet.getString("lastname");
                     int age = resultSet.getInt("age");
-                    builder.append(String.format("%3|-%30|-%50|-%3\n", id, name, lastname, age));
+                    builder.append(String.format("%3d|-%30s|-%50s|-%3d\n", id, name, lastname, age));
                 }
 
         } catch (SQLException e) {
@@ -71,11 +71,11 @@ public class Controller  {
         }
     }
 
-    public void checkChenged(InputMethodEvent inputMethodEvent) {
+//    public void checkChenged(InputMethodEvent inputMethodEvent) {
+//
+//    }
 
-    }
-
-    public void checkText(KeyEvent keyEvent) {
+    public void checkText() {
         button.setDisable(textField.getText().isEmpty());
     }
 
